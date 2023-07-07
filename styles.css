@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 0.813rem;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+    margin: 4rem 0;
+    max-width: 64rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+}
+
+.card {
+    border-radius: .6rem;
+    padding: 1.3rem;
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 20.6rem;
+}
+
+.card2 {
+    grid-area: card2;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.card3 {
+    grid-area: card3;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 5px 5px 30px rgba(163, 156, 156, 0.694);
+}
+
+.card4 {
+    grid-area: card4;
+    background-color: hsl(219, 29%, 14%);
+    box-shadow: 5px 5px 30px rgba(163, 156, 156, 0.694);
+}
+
+.card5 {
+    grid-area: card5;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 5px 5px 30px rgba(163, 156, 156, 0.694);
+}
+
+img {
+    max-width: 2.1rem;
+    border-radius: 50%;
+}
+
+.profile-image-1 img, .profile-image-4 img {
+    border: 2px solid hsl(263, 74%, 70%);
+}
+
+.profile {
+    display: flex;
+    gap: .7rem;
+} 
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    font-weight: 600;
+}
+
+.name {
+    color: hsl(210, 46%, 95%);
+}
+
+.verification {
+    color: hsl(210, 46%, 95%);
+    opacity: 50%;
+}
+
+.name3-5 {
+    color: hsl(217, 19%, 35%);
+}
+
+.verification3-5 {
+    color: hsl(217, 19%, 35%);
+    opacity: 50%;
+}
+
+h2 {
+    color: hsl(210, 46%, 95%);
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.card1 h2 {
+    font-size: 1.2rem;
+}
+
+.card4 h2 {
+    font-size: 1.188rem;
+}
+
+.card3-5-h2 {
+    color: hsl(217, 19%, 35%);
+}
+
+.reviews {
+    color: hsl(210, 46%, 95%);
+    opacity: 70%;
+    font-weight: 600;
+    font-size: 0.806rem;
+}
+
+.reviews-4 {
+    font-size: 0.963rem;
+}
+
+.reviews-3-5 {
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+    font-size: .850rem;
+}
+
+@media (max-width: 600px) {
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 2fr 1.2fr .8fr 1.7fr 2fr;
+        grid-template-areas: 
+        "card1"
+        "card2" 
+        "card3"
+        "card4" 
+        "card5";
+        margin: 4rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .card1 h2, .card4 h2 {
+        font-size: 1.434rem;
+    }
+
+    .card1 .reviews {
+        font-size: 1rem;
+    }
+
+    .card2 .reviews {
+        font-size: 1.170rem;
+    }
+
+    .reviews-3-5 {
+        font-size: 1rem;
+    }
+
+    .card1 {
+        background-position-x: 13.2rem;
+    }
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
